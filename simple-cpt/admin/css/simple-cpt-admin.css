@@ -1,4 +1,132 @@
-/**
- * All of the CSS for your admin-specific functionality should be
- * included in this file.
- */
+.wrap_header {
+    clear: both;
+    padding: 10px 0;
+}
+.simple_cpt_header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 0 0 0 20px;
+    max-width: 1060px;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+}
+.simple_cpt_header.full {
+    max-width: 100%;
+}
+.simple_cpt_header .right_wrap ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.simple_cpt_header .right_wrap li {
+    float: left;
+    margin: 0;
+}
+.simple_cpt_header .right_wrap li a {
+    display: block;
+    color: #137dad;
+    text-align: center;
+    padding: 20px 10px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    box-shadow: inset 0 -3px 0 #137dad;
+    transition: 0.3s;
+}
+.simple_cpt_header .right_wrap li.position_3 a {
+    border-radius: 0 5px 5px 0;
+}
+.simple_cpt_header .right_wrap li a:hover,
+.simple_cpt_header li.selected a {
+    color: #fff;
+    box-shadow: inset 0 -100px 0 #137dad;
+    transition: 0.2s;
+}
+.simple_cpt_wrap {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 25px 0;
+    max-width: 1080px;
+}
+.simple_cpt_wrap .top,
+.simple_cpt_wrap .bottom {
+    display: flex;
+    flex-direction: row;
+}
+.simple_cpt_wrap .desc {
+    margin: 10px 0 0 0;
+}
+.simple_cpt_wrap .box {
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 48%;
+    justify-content: space-between;
+}
+.simple_cpt_wrap .box.left {
+    margin: 0 2% 0 0;
+}
+.simple_cpt_wrap .box .item-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 15px;
+}
+.simple_cpt_wrap .box .item-row:nth-child(odd) {
+    background: #f1f1f1;
+}
+.simple_cpt_wrap .box .item-row a {
+    font-size: 11px;
+    text-decoration: none;
+}
+.simple_cpt_wrap .box .item-row .left .dashicons {
+    font-size: 16px;
+    color: #789;
+}
+.simple_cpt_wrap .add_new {
+    margin: 20px 0 0 0;
+    text-align: right;
+}
+#footer {
+    display: block;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+table.simple_cpt td {
+    width: 50%;
+    vertical-align: top;
+}
+table.simple_cpt td.first {
+    width: 48%;
+    padding: 0 2% 0 0;
+}
+table.simple_cpt td label {
+    display: block;
+    font-weight: bold;
+}
+table.simple_cpt p {
+    margin: 0 0 15px 0;
+    font-size: 12px;
+}
+table.simple_cpt input,
+table.simple_cpt select,
+table.simple_cpt textarea {
+    width: 100%;
+}
+table.simple_cpt input[type='checkbox'] {
+	width: auto;
+}
+table.simple_cpt label.checkbox {
+    display: inline;
+    font-weight: normal;
+}

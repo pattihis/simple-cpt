@@ -139,7 +139,7 @@ class Simple_Cpt {
 
 		$plugin_i18n = new Simple_Cpt_i18n();
 
-		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
+		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'simple-cpt' );
 
 	}
 
@@ -156,6 +156,24 @@ class Simple_Cpt {
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
+
+		// initialise
+		$this->loader->add_action( 'init', $plugin_admin, 'plugin_init' );
+		$this->loader->add_action( 'init', $plugin_admin, 'register_simple_cpts' );
+
+		// admin setup
+		$this->loader->add_action( 'admin_init', $plugin_admin, 'simple_cpt_settings_flush_rewrite' );
+		$this->loader->add_action( 'admin_menu', $plugin_admin, 'simple_cpt_admin_menu' );
+		$this->loader->add_action( 'add_meta_boxes', $plugin_admin, 'simple_cpt_metabox');
+		$this->loader->add_action( 'save_post', $plugin_admin, 'simple_cpt_save_metabox');
+		$this->loader->add_filter( 'post_updated_messages', $plugin_admin, 'simple_cpt_update_messages');
+		$this->loader->add_action( 'admin_footer', $plugin_admin, 'simple_cpt_admin_footer' );
+
+		// table columns
+		$this->loader->add_filter( 'manage_simple_cpt_posts_columns', $plugin_admin, 'simple_cpt_posts_columns');
+		$this->loader->add_action( 'manage_simple_cpt_posts_custom_column', $plugin_admin, 'simple_cpt_posts_custom_columns', 10, 2);
+		$this->loader->add_filter( 'manage_simple_tax_posts_columns', $plugin_admin, 'simple_tax_posts_columns');
+		$this->loader->add_action( 'manage_simple_tax_posts_custom_column', $plugin_admin, 'simple_tax_posts_custom_columns', 10, 2);
 
 	}
 

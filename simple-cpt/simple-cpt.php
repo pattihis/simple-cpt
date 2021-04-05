@@ -1,12 +1,6 @@
 <?php
 
 /**
- * The plugin bootstrap file
- *
- * This file is read by WordPress to generate the plugin information in the plugin
- * admin area. This file also includes all of the dependencies used by the plugin,
- * registers the activation and deactivation functions, and defines a function
- * that starts the plugin.
  *
  * @link              https://profiles.wordpress.org/pattihis/
  * @since             1.0.0
@@ -15,7 +9,7 @@
  * @wordpress-plugin
  * Plugin Name:       Simple CPT
  * Plugin URI:        https://github.com/pattihis/simple-cpt
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
+ * Description:       A WordPress plugin to create and edit Custom Post Types easily.
  * Version:           1.0.0
  * Author:            George Pattihis
  * Author URI:        https://profiles.wordpress.org/pattihis/
