@@ -1,4 +1,4 @@
-# simple-cpt
+# Simple CPT
 _A WordPress plugin to manage Custom Post Types_
 
 **Simple CPT** provides an easy to use interface for registering and managing custom post types and taxonomies for your WordPress website.
