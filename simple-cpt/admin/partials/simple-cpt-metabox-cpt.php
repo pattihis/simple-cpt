@@ -114,8 +114,10 @@ wp_nonce_field( 'simple_cpt_meta_box_nonce_action', 'simple_cpt_meta_box_nonce_f
     </tr>
     <tr>
         <td class="first">
-            <label for="simple_cpt_icon_slug"><?php _e( 'Slug Icon', 'simple-cpt' ); ?></label>
-            <?php if ( $simple_cpt_icon_slug ) { ?><span id="simple_cpt_icon_slug_before" class="dashicons-before <?php echo $simple_cpt_icon_slug; ?>"><?php } ?></span>
+            <label for="simple_cpt_icon_slug">
+            <?php if ( $simple_cpt_icon_slug ) { ?><span id="simple_cpt_icon_slug_before" class="dashicons-before <?php echo $simple_cpt_icon_slug; ?>"></span> <?php } ?>
+            <?php _e( 'Slug Icon', 'simple-cpt' ); ?>
+            </label>
             <input type="text" name="simple_cpt_icon_slug" id="simple_cpt_icon_slug" class="widefat" tabindex="14" value="<?php echo $simple_cpt_icon_slug; ?>" />
             <p><?php _e( 'This uses (<a href="https://developer.WordPress.org/resource/dashicons/">Dashicons</a>), e.g. dashicons-heart', 'simple-cpt' ); ?></p>
         </td>
