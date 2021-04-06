@@ -245,27 +245,27 @@ class Simple_Cpt_Admin {
 		global $pagenow;
 		$meta = get_post_custom( $post->ID );
 
-		$simple_cpt_name          			 = isset( $meta['simple_cpt_name'] ) ? esc_attr( $meta['simple_cpt_name'][0] ) : '';
-		$simple_cpt_label         			 = isset( $meta['simple_cpt_label'] ) ? esc_attr( $meta['simple_cpt_label'][0] ) : '';
-		$simple_cpt_singular_name 			 = isset( $meta['simple_cpt_singular_name'] ) ? esc_attr( $meta['simple_cpt_singular_name'][0] ) : '';
-		$simple_cpt_description   			 = isset( $meta['simple_cpt_description'] ) ? esc_attr( $meta['simple_cpt_description'][0] ) : '';
-		$simple_cpt_icon_slug 	  			 = isset( $meta['simple_cpt_icon_slug'] ) ? esc_attr( $meta['simple_cpt_icon_slug'][0] ) : '';
-		$simple_cpt_custom_rewrite_slug 	 = isset( $meta['simple_cpt_custom_rewrite_slug'] ) ? esc_attr( $meta['simple_cpt_custom_rewrite_slug'][0] ) : '';
-		$simple_cpt_menu_position       	 = isset( $meta['simple_cpt_menu_position'] ) ? esc_attr( $meta['simple_cpt_menu_position'][0] ) : '';
-		$simple_cpt_public              	 = isset( $meta['simple_cpt_public'] ) ? esc_attr( $meta['simple_cpt_public'][0] ) : '';
-		$simple_cpt_show_ui             	 = isset( $meta['simple_cpt_show_ui'] ) ? esc_attr( $meta['simple_cpt_show_ui'][0] ) : '';
-		$simple_cpt_has_archive         	 = isset( $meta['simple_cpt_has_archive'] ) ? esc_attr( $meta['simple_cpt_has_archive'][0] ) : '';
-		$simple_cpt_exclude_from_search 	 = isset( $meta['simple_cpt_exclude_from_search'] ) ? esc_attr( $meta['simple_cpt_exclude_from_search'][0] ) : '';
-		$simple_cpt_capability_type     	 = isset( $meta['simple_cpt_capability_type'] ) ? esc_attr( $meta['simple_cpt_capability_type'][0] ) : '';
-		$simple_cpt_hierarchical        	 = isset( $meta['simple_cpt_hierarchical'] ) ? esc_attr( $meta['simple_cpt_hierarchical'][0] ) : '';
-		$simple_cpt_rewrite             	 = isset( $meta['simple_cpt_rewrite'] ) ? esc_attr( $meta['simple_cpt_rewrite'][0] ) : '';
-		$simple_cpt_withfront           	 = isset( $meta['simple_cpt_withfront'] ) ? esc_attr( $meta['simple_cpt_withfront'][0] ) : '';
-		$simple_cpt_feeds               	 = isset( $meta['simple_cpt_feeds'] ) ? esc_attr( $meta['simple_cpt_feeds'][0] ) : '';
-		$simple_cpt_pages               	 = isset( $meta['simple_cpt_pages'] ) ? esc_attr( $meta['simple_cpt_pages'][0] ) : '';
-		$simple_cpt_query_var           	 = isset( $meta['simple_cpt_query_var'] ) ? esc_attr( $meta['simple_cpt_query_var'][0] ) : '';
-		$simple_cpt_show_in_rest        	 = isset( $meta['simple_cpt_show_in_rest'] ) ? esc_attr( $meta['simple_cpt_show_in_rest'][0] ) : '';
-		$simple_cpt_publicly_queryable  	 = isset( $meta['simple_cpt_publicly_queryable'] ) ? esc_attr( $meta['simple_cpt_publicly_queryable'][0] ) : '';
-		$simple_cpt_show_in_menu        	 = isset( $meta['simple_cpt_show_in_menu'] ) ? esc_attr( $meta['simple_cpt_show_in_menu'][0] ) : '';
+		$simple_cpt_name          			 = isset( $meta['simple_cpt_name'] ) ? sanitize_title( $meta['simple_cpt_name'][0] ) : '';
+		$simple_cpt_label         			 = isset( $meta['simple_cpt_label'] ) ? sanitize_text_field( $meta['simple_cpt_label'][0] ) : '';
+		$simple_cpt_singular_name 			 = isset( $meta['simple_cpt_singular_name'] ) ? sanitize_text_field( $meta['simple_cpt_singular_name'][0] ) : '';
+		$simple_cpt_description   			 = isset( $meta['simple_cpt_description'] ) ? sanitize_textarea_field( $meta['simple_cpt_description'][0] ) : '';
+		$simple_cpt_icon_slug 	  			 = isset( $meta['simple_cpt_icon_slug'] ) ? sanitize_title( $meta['simple_cpt_icon_slug'][0] ) : '';
+		$simple_cpt_custom_rewrite_slug 	 = isset( $meta['simple_cpt_custom_rewrite_slug'] ) ? sanitize_title( $meta['simple_cpt_custom_rewrite_slug'][0] ) : '';
+		$simple_cpt_menu_position       	 = isset( $meta['simple_cpt_menu_position'] ) ? sanitize_text_field( $meta['simple_cpt_menu_position'][0] ) : '';
+		$simple_cpt_public              	 = isset( $meta['simple_cpt_public'] ) ? sanitize_text_field( $meta['simple_cpt_public'][0] ) : '';
+		$simple_cpt_show_ui             	 = isset( $meta['simple_cpt_show_ui'] ) ? sanitize_text_field( $meta['simple_cpt_show_ui'][0] ) : '';
+		$simple_cpt_has_archive         	 = isset( $meta['simple_cpt_has_archive'] ) ? sanitize_text_field( $meta['simple_cpt_has_archive'][0] ) : '';
+		$simple_cpt_exclude_from_search 	 = isset( $meta['simple_cpt_exclude_from_search'] ) ? sanitize_text_field( $meta['simple_cpt_exclude_from_search'][0] ) : '';
+		$simple_cpt_capability_type     	 = isset( $meta['simple_cpt_capability_type'] ) ? sanitize_text_field( $meta['simple_cpt_capability_type'][0] ) : '';
+		$simple_cpt_hierarchical        	 = isset( $meta['simple_cpt_hierarchical'] ) ? sanitize_text_field( $meta['simple_cpt_hierarchical'][0] ) : '';
+		$simple_cpt_rewrite             	 = isset( $meta['simple_cpt_rewrite'] ) ? sanitize_text_field( $meta['simple_cpt_rewrite'][0] ) : '';
+		$simple_cpt_withfront           	 = isset( $meta['simple_cpt_withfront'] ) ? sanitize_text_field( $meta['simple_cpt_withfront'][0] ) : '';
+		$simple_cpt_feeds               	 = isset( $meta['simple_cpt_feeds'] ) ? sanitize_text_field( $meta['simple_cpt_feeds'][0] ) : '';
+		$simple_cpt_pages               	 = isset( $meta['simple_cpt_pages'] ) ? sanitize_text_field( $meta['simple_cpt_pages'][0] ) : '';
+		$simple_cpt_query_var           	 = isset( $meta['simple_cpt_query_var'] ) ? sanitize_text_field( $meta['simple_cpt_query_var'][0] ) : '';
+		$simple_cpt_show_in_rest        	 = isset( $meta['simple_cpt_show_in_rest'] ) ? sanitize_text_field( $meta['simple_cpt_show_in_rest'][0] ) : '';
+		$simple_cpt_publicly_queryable  	 = isset( $meta['simple_cpt_publicly_queryable'] ) ? sanitize_text_field( $meta['simple_cpt_publicly_queryable'][0] ) : '';
+		$simple_cpt_show_in_menu        	 = isset( $meta['simple_cpt_show_in_menu'] ) ? sanitize_text_field( $meta['simple_cpt_show_in_menu'][0] ) : '';
 		$simple_cpt_supports                 = isset( $meta['simple_cpt_supports'] ) ? unserialize( $meta['simple_cpt_supports'][0] ) : array();
 		$simple_cpt_supports_title           = ( isset( $meta['simple_cpt_supports'] ) && in_array( 'title', $simple_cpt_supports ) ? 'title' : '' );
 		$simple_cpt_supports_editor          = ( isset( $meta['simple_cpt_supports'] ) && in_array( 'editor', $simple_cpt_supports ) ? 'editor' : '' );
@@ -282,6 +282,7 @@ class Simple_Cpt_Admin {
 		$simple_cpt_builtin_tax_categories   = ( isset( $meta['simple_cpt_builtin_tax'] ) && in_array( 'category', $simple_cpt_builtin_tax ) ? 'category' : '' );
 		$simple_cpt_builtin_tax_tags         = ( isset( $meta['simple_cpt_builtin_tax'] ) && in_array( 'post_tag', $simple_cpt_builtin_tax ) ? 'post_tag' : '' );
 
+		// set default support options when creating new CPT
 		$simple_cpt_supports_title   = $pagenow === 'post-new.php' ? 'title' : $simple_cpt_supports_title;
 		$simple_cpt_supports_editor  = $pagenow === 'post-new.php' ? 'editor' : $simple_cpt_supports_editor;
 		$simple_cpt_supports_excerpt = $pagenow === 'post-new.php' ? 'excerpt' : $simple_cpt_supports_excerpt;
@@ -297,16 +298,16 @@ class Simple_Cpt_Admin {
 	public function simple_tax_metabox_content( $post ) {
 		$values = get_post_custom( $post->ID );
 
-		$simple_cpt_tax_name                = isset( $values['simple_cpt_tax_name'] ) ? esc_attr( $values['simple_cpt_tax_name'][0] ) : '';
-		$simple_cpt_tax_label               = isset( $values['simple_cpt_tax_label'] ) ? esc_attr( $values['simple_cpt_tax_label'][0] ) : '';
-		$simple_cpt_tax_singular_name       = isset( $values['simple_cpt_tax_singular_name'] ) ? esc_attr( $values['simple_cpt_tax_singular_name'][0] ) : '';
-		$simple_cpt_tax_custom_rewrite_slug = isset( $values['simple_cpt_tax_custom_rewrite_slug'] ) ? esc_attr( $values['simple_cpt_tax_custom_rewrite_slug'][0] ) : '';
-		$simple_cpt_tax_show_ui           = isset( $values['simple_cpt_tax_show_ui'] ) ? esc_attr( $values['simple_cpt_tax_show_ui'][0] ) : '';
-		$simple_cpt_tax_hierarchical      = isset( $values['simple_cpt_tax_hierarchical'] ) ? esc_attr( $values['simple_cpt_tax_hierarchical'][0] ) : '';
-		$simple_cpt_tax_rewrite           = isset( $values['simple_cpt_tax_rewrite'] ) ? esc_attr( $values['simple_cpt_tax_rewrite'][0] ) : '';
-		$simple_cpt_tax_query_var         = isset( $values['simple_cpt_tax_query_var'] ) ? esc_attr( $values['simple_cpt_tax_query_var'][0] ) : '';
-		$simple_cpt_tax_show_in_rest      = isset( $values['simple_cpt_tax_show_in_rest'] ) ? esc_attr( $values['simple_cpt_tax_show_in_rest'][0] ) : '';
-		$simple_cpt_tax_show_admin_column = isset( $values['simple_cpt_tax_show_admin_column'] ) ? esc_attr( $values['simple_cpt_tax_show_admin_column'][0] ) : '';
+		$simple_cpt_tax_name                = isset( $values['simple_cpt_tax_name'] ) ? sanitize_title( $values['simple_cpt_tax_name'][0] ) : '';
+		$simple_cpt_tax_label               = isset( $values['simple_cpt_tax_label'] ) ? sanitize_text_field( $values['simple_cpt_tax_label'][0] ) : '';
+		$simple_cpt_tax_singular_name       = isset( $values['simple_cpt_tax_singular_name'] ) ? sanitize_text_field( $values['simple_cpt_tax_singular_name'][0] ) : '';
+		$simple_cpt_tax_custom_rewrite_slug = isset( $values['simple_cpt_tax_custom_rewrite_slug'] ) ? sanitize_title( $values['simple_cpt_tax_custom_rewrite_slug'][0] ) : '';
+		$simple_cpt_tax_show_ui           = isset( $values['simple_cpt_tax_show_ui'] ) ? sanitize_text_field( $values['simple_cpt_tax_show_ui'][0] ) : '';
+		$simple_cpt_tax_hierarchical      = isset( $values['simple_cpt_tax_hierarchical'] ) ? sanitize_text_field( $values['simple_cpt_tax_hierarchical'][0] ) : '';
+		$simple_cpt_tax_rewrite           = isset( $values['simple_cpt_tax_rewrite'] ) ? sanitize_text_field( $values['simple_cpt_tax_rewrite'][0] ) : '';
+		$simple_cpt_tax_query_var         = isset( $values['simple_cpt_tax_query_var'] ) ? sanitize_text_field( $values['simple_cpt_tax_query_var'][0] ) : '';
+		$simple_cpt_tax_show_in_rest      = isset( $values['simple_cpt_tax_show_in_rest'] ) ? sanitize_text_field( $values['simple_cpt_tax_show_in_rest'][0] ) : '';
+		$simple_cpt_tax_show_admin_column = isset( $values['simple_cpt_tax_show_admin_column'] ) ? sanitize_text_field( $values['simple_cpt_tax_show_admin_column'][0] ) : '';
 		$simple_cpt_tax_post_types      = isset( $values['simple_cpt_tax_post_types'] ) ? unserialize( $values['simple_cpt_tax_post_types'][0] ) : array();
 		$simple_cpt_tax_post_types_post = ( isset( $values['simple_cpt_tax_post_types'] ) && in_array( 'post', $simple_cpt_tax_post_types ) ? 'post' : '' );
 		$simple_cpt_tax_post_types_page = ( isset( $values['simple_cpt_tax_post_types'] ) && in_array( 'page', $simple_cpt_tax_post_types ) ? 'page' : '' );
@@ -335,7 +336,7 @@ class Simple_Cpt_Admin {
 
 		// CPTs fields
 		if ( isset( $_POST['simple_cpt_name'] ) ) {
-			update_post_meta( $post_id, 'simple_cpt_name', sanitize_text_field( strtolower( str_replace( ' ', '', $_POST['simple_cpt_name'] ) ) ) );
+			update_post_meta( $post_id, 'simple_cpt_name', sanitize_title( strtolower( str_replace( ' ', '', $_POST['simple_cpt_name'] ) ) ) );
 		}
 
 		if ( isset( $_POST['simple_cpt_label'] ) ) {
@@ -347,67 +348,67 @@ class Simple_Cpt_Admin {
 		}
 
 		if ( isset( $_POST['simple_cpt_description'] ) ) {
-			update_post_meta( $post_id, 'simple_cpt_description', esc_textarea( $_POST['simple_cpt_description'] ) );
+			update_post_meta( $post_id, 'simple_cpt_description', sanitize_textarea_field( $_POST['simple_cpt_description'] ) );
 		}
 
 		if ( isset( $_POST['simple_cpt_icon_slug'] ) ) {
-			update_post_meta( $post_id, 'simple_cpt_icon_slug', esc_textarea( $_POST['simple_cpt_icon_slug'] ) );
+			update_post_meta( $post_id, 'simple_cpt_icon_slug', sanitize_title( $_POST['simple_cpt_icon_slug'] ) );
 		}
 
 		if ( isset( $_POST['simple_cpt_public'] ) ) {
-			update_post_meta( $post_id, 'simple_cpt_public', esc_attr( $_POST['simple_cpt_public'] ) );
+			update_post_meta( $post_id, 'simple_cpt_public', sanitize_text_field( $_POST['simple_cpt_public'] ) );
 		}
 
 		if ( isset( $_POST['simple_cpt_show_ui'] ) ) {
-			update_post_meta( $post_id, 'simple_cpt_show_ui', esc_attr( $_POST['simple_cpt_show_ui'] ) );
+			update_post_meta( $post_id, 'simple_cpt_show_ui', sanitize_text_field( $_POST['simple_cpt_show_ui'] ) );
 		}
 
 		if ( isset( $_POST['simple_cpt_has_archive'] ) ) {
-			update_post_meta( $post_id, 'simple_cpt_has_archive', esc_attr( $_POST['simple_cpt_has_archive'] ) );
+			update_post_meta( $post_id, 'simple_cpt_has_archive', sanitize_text_field( $_POST['simple_cpt_has_archive'] ) );
 		}
 
 		if ( isset( $_POST['simple_cpt_exclude_from_search'] ) ) {
-			update_post_meta( $post_id, 'simple_cpt_exclude_from_search', esc_attr( $_POST['simple_cpt_exclude_from_search'] ) );
+			update_post_meta( $post_id, 'simple_cpt_exclude_from_search', sanitize_text_field( $_POST['simple_cpt_exclude_from_search'] ) );
 		}
 
 		if ( isset( $_POST['simple_cpt_capability_type'] ) ) {
-			update_post_meta( $post_id, 'simple_cpt_capability_type', esc_attr( $_POST['simple_cpt_capability_type'] ) );
+			update_post_meta( $post_id, 'simple_cpt_capability_type', sanitize_text_field( $_POST['simple_cpt_capability_type'] ) );
 		}
 
 		if ( isset( $_POST['simple_cpt_hierarchical'] ) ) {
-			update_post_meta( $post_id, 'simple_cpt_hierarchical', esc_attr( $_POST['simple_cpt_hierarchical'] ) );
+			update_post_meta( $post_id, 'simple_cpt_hierarchical', sanitize_text_field( $_POST['simple_cpt_hierarchical'] ) );
 		}
 
 		if ( isset( $_POST['simple_cpt_rewrite'] ) ) {
-			update_post_meta( $post_id, 'simple_cpt_rewrite', esc_attr( $_POST['simple_cpt_rewrite'] ) );
+			update_post_meta( $post_id, 'simple_cpt_rewrite', sanitize_text_field( $_POST['simple_cpt_rewrite'] ) );
 		}
 
 		if ( isset( $_POST['simple_cpt_withfront'] ) ) {
-			update_post_meta( $post_id, 'simple_cpt_withfront', esc_attr( $_POST['simple_cpt_withfront'] ) );
+			update_post_meta( $post_id, 'simple_cpt_withfront', sanitize_text_field( $_POST['simple_cpt_withfront'] ) );
 		}
 
 		if ( isset( $_POST['simple_cpt_feeds'] ) ) {
-			update_post_meta( $post_id, 'simple_cpt_feeds', esc_attr( $_POST['simple_cpt_feeds'] ) );
+			update_post_meta( $post_id, 'simple_cpt_feeds', sanitize_text_field( $_POST['simple_cpt_feeds'] ) );
 		}
 
 		if ( isset( $_POST['simple_cpt_pages'] ) ) {
-			update_post_meta( $post_id, 'simple_cpt_pages', esc_attr( $_POST['simple_cpt_pages'] ) );
+			update_post_meta( $post_id, 'simple_cpt_pages', sanitize_text_field( $_POST['simple_cpt_pages'] ) );
 		}
 
 		if ( isset( $_POST['simple_cpt_custom_rewrite_slug'] ) ) {
-			update_post_meta( $post_id, 'simple_cpt_custom_rewrite_slug', sanitize_text_field( $_POST['simple_cpt_custom_rewrite_slug'] ) );
+			update_post_meta( $post_id, 'simple_cpt_custom_rewrite_slug', sanitize_title( $_POST['simple_cpt_custom_rewrite_slug'] ) );
 		}
 
 		if ( isset( $_POST['simple_cpt_query_var'] ) ) {
-			update_post_meta( $post_id, 'simple_cpt_query_var', esc_attr( $_POST['simple_cpt_query_var'] ) );
+			update_post_meta( $post_id, 'simple_cpt_query_var', sanitize_text_field( $_POST['simple_cpt_query_var'] ) );
 		}
 
 		if ( isset( $_POST['simple_cpt_show_in_rest'] ) ) {
-			update_post_meta( $post_id, 'simple_cpt_show_in_rest', esc_attr( $_POST['simple_cpt_show_in_rest'] ) );
+			update_post_meta( $post_id, 'simple_cpt_show_in_rest', sanitize_text_field( $_POST['simple_cpt_show_in_rest'] ) );
 		}
 
 		if ( isset( $_POST['simple_cpt_publicly_queryable'] ) ) {
-			update_post_meta( $post_id, 'simple_cpt_publicly_queryable', esc_attr( $_POST['simple_cpt_publicly_queryable'] ) );
+			update_post_meta( $post_id, 'simple_cpt_publicly_queryable', sanitize_text_field( $_POST['simple_cpt_publicly_queryable'] ) );
 		}
 
 		if ( isset( $_POST['simple_cpt_menu_position'] ) ) {
@@ -415,20 +416,19 @@ class Simple_Cpt_Admin {
 		}
 
 		if ( isset( $_POST['simple_cpt_show_in_menu'] ) ) {
-			update_post_meta( $post_id, 'simple_cpt_show_in_menu', esc_attr( $_POST['simple_cpt_show_in_menu'] ) );
+			update_post_meta( $post_id, 'simple_cpt_show_in_menu', sanitize_text_field( $_POST['simple_cpt_show_in_menu'] ) );
 		}
 
-		$simple_cpt_supports = isset( $_POST['simple_cpt_supports'] ) ? $_POST['simple_cpt_supports'] : array(); {
-			update_post_meta( $post_id, 'simple_cpt_supports', $simple_cpt_supports );
-		}
+		$simple_cpt_supports = isset( $_POST['simple_cpt_supports'] ) ? sanitize_text_field($_POST['simple_cpt_supports']) : array(); 
+		update_post_meta( $post_id, 'simple_cpt_supports', $simple_cpt_supports );
 
-		$simple_cpt_builtin_tax = isset( $_POST['simple_cpt_builtin_tax'] ) ? $_POST['simple_cpt_builtin_tax'] : array();
+		$simple_cpt_builtin_tax = isset( $_POST['simple_cpt_builtin_tax'] ) ? sanitize_text_field($_POST['simple_cpt_builtin_tax']) : array();
 		update_post_meta( $post_id, 'simple_cpt_builtin_tax', $simple_cpt_builtin_tax );
 		update_post_meta( $post_id, 'gp_test', $_POST['simple_cpt_builtin_tax']  );
 
 		// Taxonomies fields
 		if ( isset( $_POST['simple_cpt_tax_name'] ) ) {
-			update_post_meta( $post_id, 'simple_cpt_tax_name', sanitize_text_field( str_replace( ' ', '', $_POST['simple_cpt_tax_name'] ) ) );
+			update_post_meta( $post_id, 'simple_cpt_tax_name', sanitize_title( str_replace( ' ', '', $_POST['simple_cpt_tax_name'] ) ) );
 		}
 
 		if ( isset( $_POST['simple_cpt_tax_label'] ) ) {
@@ -440,34 +440,34 @@ class Simple_Cpt_Admin {
 		}
 
 		if ( isset( $_POST['simple_cpt_tax_show_ui'] ) ) {
-			update_post_meta( $post_id, 'simple_cpt_tax_show_ui', esc_attr( $_POST['simple_cpt_tax_show_ui'] ) );
+			update_post_meta( $post_id, 'simple_cpt_tax_show_ui', sanitize_text_field( $_POST['simple_cpt_tax_show_ui'] ) );
 		}
 
 		if ( isset( $_POST['simple_cpt_tax_hierarchical'] ) ) {
-			update_post_meta( $post_id, 'simple_cpt_tax_hierarchical', esc_attr( $_POST['simple_cpt_tax_hierarchical'] ) );
+			update_post_meta( $post_id, 'simple_cpt_tax_hierarchical', sanitize_text_field( $_POST['simple_cpt_tax_hierarchical'] ) );
 		}
 
 		if ( isset( $_POST['simple_cpt_tax_rewrite'] ) ) {
-			update_post_meta( $post_id, 'simple_cpt_tax_rewrite', esc_attr( $_POST['simple_cpt_tax_rewrite'] ) );
+			update_post_meta( $post_id, 'simple_cpt_tax_rewrite', sanitize_text_field( $_POST['simple_cpt_tax_rewrite'] ) );
 		}
 
 		if ( isset( $_POST['simple_cpt_tax_custom_rewrite_slug'] ) ) {
-			update_post_meta( $post_id, 'simple_cpt_tax_custom_rewrite_slug', sanitize_text_field( $_POST['simple_cpt_tax_custom_rewrite_slug'] ) );
+			update_post_meta( $post_id, 'simple_cpt_tax_custom_rewrite_slug', sanitize_title( $_POST['simple_cpt_tax_custom_rewrite_slug'] ) );
 		}
 
 		if ( isset( $_POST['simple_cpt_tax_query_var'] ) ) {
-			update_post_meta( $post_id, 'simple_cpt_tax_query_var', esc_attr( $_POST['simple_cpt_tax_query_var'] ) );
+			update_post_meta( $post_id, 'simple_cpt_tax_query_var', sanitize_text_field( $_POST['simple_cpt_tax_query_var'] ) );
 		}
 
 		if ( isset( $_POST['simple_cpt_tax_show_in_rest'] ) ) {
-			update_post_meta( $post_id, 'simple_cpt_tax_show_in_rest', esc_attr( $_POST['simple_cpt_tax_show_in_rest'] ) );
+			update_post_meta( $post_id, 'simple_cpt_tax_show_in_rest', sanitize_text_field( $_POST['simple_cpt_tax_show_in_rest'] ) );
 		}
 
 		if ( isset( $_POST['simple_cpt_tax_show_admin_column'] ) ) {
-			update_post_meta( $post_id, 'simple_cpt_tax_show_admin_column', esc_attr( $_POST['simple_cpt_tax_show_admin_column'] ) );
+			update_post_meta( $post_id, 'simple_cpt_tax_show_admin_column', sanitize_text_field( $_POST['simple_cpt_tax_show_admin_column'] ) );
 		}
 
-		$simple_cpt_tax_post_types = isset( $_POST['simple_cpt_tax_post_types'] ) ? $_POST['simple_cpt_tax_post_types'] : array();
+		$simple_cpt_tax_post_types = isset( $_POST['simple_cpt_tax_post_types'] ) ? sanitize_text_field($_POST['simple_cpt_tax_post_types']) : array();
 		update_post_meta( $post_id, 'simple_cpt_tax_post_types', $simple_cpt_tax_post_types );
 
 		update_option( 'simple_cpt_flush_needed', true );
@@ -625,18 +625,18 @@ class Simple_Cpt_Admin {
 				$simple_cpt_meta = get_post_meta( $simple_cpt->ID, '', true );
 
 				// text
-				$simple_cpt_name          = ( array_key_exists( 'simple_cpt_name', $simple_cpt_meta ) && $simple_cpt_meta['simple_cpt_name'][0] ? esc_html( $simple_cpt_meta['simple_cpt_name'][0] ) : 'no_name' );
-				$simple_cpt_label         = ( array_key_exists( 'simple_cpt_label', $simple_cpt_meta ) && $simple_cpt_meta['simple_cpt_label'][0] ? esc_html( $simple_cpt_meta['simple_cpt_label'][0] ) : $simple_cpt_name );
-				$simple_cpt_singular_name = ( array_key_exists( 'simple_cpt_singular_name', $simple_cpt_meta ) && $simple_cpt_meta['simple_cpt_singular_name'][0] ? esc_html( $simple_cpt_meta['simple_cpt_singular_name'][0] ) : $simple_cpt_label );
-				$simple_cpt_description   = ( array_key_exists( 'simple_cpt_description', $simple_cpt_meta ) && $simple_cpt_meta['simple_cpt_description'][0] ? $simple_cpt_meta['simple_cpt_description'][0] : '' );
+				$simple_cpt_name          = ( array_key_exists( 'simple_cpt_name', $simple_cpt_meta ) && $simple_cpt_meta['simple_cpt_name'][0] ? sanitize_title( $simple_cpt_meta['simple_cpt_name'][0] ) : 'no_name' );
+				$simple_cpt_label         = ( array_key_exists( 'simple_cpt_label', $simple_cpt_meta ) && $simple_cpt_meta['simple_cpt_label'][0] ? sanitize_text_field( $simple_cpt_meta['simple_cpt_label'][0] ) : $simple_cpt_name );
+				$simple_cpt_singular_name = ( array_key_exists( 'simple_cpt_singular_name', $simple_cpt_meta ) && $simple_cpt_meta['simple_cpt_singular_name'][0] ? sanitize_text_field( $simple_cpt_meta['simple_cpt_singular_name'][0] ) : $simple_cpt_label );
+				$simple_cpt_description   = ( array_key_exists( 'simple_cpt_description', $simple_cpt_meta ) && $simple_cpt_meta['simple_cpt_description'][0] ? sanitize_textarea_field($simple_cpt_meta['simple_cpt_description'][0]) : '' );
 
-				// Custom post icon (dashicons)
-				$simple_cpt_icon_name = ( array_key_exists( 'simple_cpt_icon_slug', $simple_cpt_meta ) && $simple_cpt_meta['simple_cpt_icon_slug'][0] ? $simple_cpt_meta['simple_cpt_icon_slug'][0] : false );
+				// post icon (dashicons)
+				$simple_cpt_icon_name = ( array_key_exists( 'simple_cpt_icon_slug', $simple_cpt_meta ) && $simple_cpt_meta['simple_cpt_icon_slug'][0] ? sanitize_title($simple_cpt_meta['simple_cpt_icon_slug'][0]) : false );
 
-				$simple_cpt_custom_rewrite_slug = ( array_key_exists( 'simple_cpt_custom_rewrite_slug', $simple_cpt_meta ) && $simple_cpt_meta['simple_cpt_custom_rewrite_slug'][0] ? esc_html( $simple_cpt_meta['simple_cpt_custom_rewrite_slug'][0] ) : $simple_cpt_name );
+				$simple_cpt_custom_rewrite_slug = ( array_key_exists( 'simple_cpt_custom_rewrite_slug', $simple_cpt_meta ) && $simple_cpt_meta['simple_cpt_custom_rewrite_slug'][0] ? sanitize_title( $simple_cpt_meta['simple_cpt_custom_rewrite_slug'][0] ) : $simple_cpt_name );
 				$simple_cpt_menu_position       = ( array_key_exists( 'simple_cpt_menu_position', $simple_cpt_meta ) && $simple_cpt_meta['simple_cpt_menu_position'][0] ? (int) $simple_cpt_meta['simple_cpt_menu_position'][0] : null );
 
-				// dropdown
+				// dropdowns
 				$simple_cpt_public              = ( array_key_exists( 'simple_cpt_public', $simple_cpt_meta ) && $simple_cpt_meta['simple_cpt_public'][0] == '1' ? true : false );
 				$simple_cpt_show_ui             = ( array_key_exists( 'simple_cpt_show_ui', $simple_cpt_meta ) && $simple_cpt_meta['simple_cpt_show_ui'][0] == '1' ? true : false );
 				$simple_cpt_has_archive         = ( array_key_exists( 'simple_cpt_has_archive', $simple_cpt_meta ) && $simple_cpt_meta['simple_cpt_has_archive'][0] == '1' ? true : false );
@@ -661,8 +661,8 @@ class Simple_Cpt_Admin {
 
 				$simple_cpt_show_in_menu = ( array_key_exists( 'simple_cpt_show_in_menu', $simple_cpt_meta ) && $simple_cpt_meta['simple_cpt_show_in_menu'][0] == '1' ? true : false );
 
-				// checkbox
-				$simple_cpt_supports           = ( array_key_exists( 'simple_cpt_supports', $simple_cpt_meta ) && $simple_cpt_meta['simple_cpt_supports'][0] ? $simple_cpt_meta['simple_cpt_supports'][0] : 'a:2:{i:0;s:5:"title";i:1;s:6:"editor";}' );
+				// checkboxes
+				$simple_cpt_supports    = ( array_key_exists( 'simple_cpt_supports', $simple_cpt_meta ) && $simple_cpt_meta['simple_cpt_supports'][0] ? $simple_cpt_meta['simple_cpt_supports'][0] : 'a:2:{i:0;s:5:"title";i:1;s:6:"editor";}' );
 				$simple_cpt_builtin_tax = ( array_key_exists( 'simple_cpt_builtin_tax', $simple_cpt_meta ) && $simple_cpt_meta['simple_cpt_builtin_tax'][0] ? $simple_cpt_meta['simple_cpt_builtin_tax'][0] : 'a:0:{}' );
 
 				$simple_cpt_rewrite_options = array();
@@ -763,10 +763,10 @@ class Simple_Cpt_Admin {
 				$simple_cpt_meta = get_post_meta( $simple_cpt_tax->ID, '', true );
 
 				// text
-				$simple_cpt_tax_name                = ( array_key_exists( 'simple_cpt_tax_name', $simple_cpt_meta ) && $simple_cpt_meta['simple_cpt_tax_name'][0] ? esc_html( $simple_cpt_meta['simple_cpt_tax_name'][0] ) : 'no_name' );
-				$simple_cpt_tax_label               = ( array_key_exists( 'simple_cpt_tax_label', $simple_cpt_meta ) && $simple_cpt_meta['simple_cpt_tax_label'][0] ? esc_html( $simple_cpt_meta['simple_cpt_tax_label'][0] ) : $simple_cpt_tax_name );
-				$simple_cpt_tax_singular_name       = ( array_key_exists( 'simple_cpt_tax_singular_name', $simple_cpt_meta ) && $simple_cpt_meta['simple_cpt_tax_singular_name'][0] ? esc_html( $simple_cpt_meta['simple_cpt_tax_singular_name'][0] ) : $simple_cpt_tax_label );
-				$simple_cpt_tax_custom_rewrite_slug = ( array_key_exists( 'simple_cpt_tax_custom_rewrite_slug', $simple_cpt_meta ) && $simple_cpt_meta['simple_cpt_tax_custom_rewrite_slug'][0] ? esc_html( $simple_cpt_meta['simple_cpt_tax_custom_rewrite_slug'][0] ) : $simple_cpt_tax_name );
+				$simple_cpt_tax_name                = ( array_key_exists( 'simple_cpt_tax_name', $simple_cpt_meta ) && $simple_cpt_meta['simple_cpt_tax_name'][0] ? sanitize_title( $simple_cpt_meta['simple_cpt_tax_name'][0] ) : 'no_name' );
+				$simple_cpt_tax_label               = ( array_key_exists( 'simple_cpt_tax_label', $simple_cpt_meta ) && $simple_cpt_meta['simple_cpt_tax_label'][0] ? sanitize_text_field( $simple_cpt_meta['simple_cpt_tax_label'][0] ) : $simple_cpt_tax_name );
+				$simple_cpt_tax_singular_name       = ( array_key_exists( 'simple_cpt_tax_singular_name', $simple_cpt_meta ) && $simple_cpt_meta['simple_cpt_tax_singular_name'][0] ? sanitize_text_field( $simple_cpt_meta['simple_cpt_tax_singular_name'][0] ) : $simple_cpt_tax_label );
+				$simple_cpt_tax_custom_rewrite_slug = ( array_key_exists( 'simple_cpt_tax_custom_rewrite_slug', $simple_cpt_meta ) && $simple_cpt_meta['simple_cpt_tax_custom_rewrite_slug'][0] ? sanitize_title( $simple_cpt_meta['simple_cpt_tax_custom_rewrite_slug'][0] ) : $simple_cpt_tax_name );
 
 				// dropdown
 				$simple_cpt_tax_show_ui           = ( array_key_exists( 'simple_cpt_tax_show_ui', $simple_cpt_meta ) && $simple_cpt_meta['simple_cpt_tax_show_ui'][0] == '1' ? true : false );
@@ -837,6 +837,5 @@ class Simple_Cpt_Admin {
 	}
 
 
-	
 
 }
