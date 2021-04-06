@@ -24,7 +24,7 @@ wp_nonce_field( 'simple_cpt_meta_box_nonce_action', 'simple_cpt_meta_box_nonce_f
         </td>
         <td>
             <label for="simple_cpt_tax_hierarchical"><?php _e( 'Hierarchical', 'simple-cpt' ); ?></label>
-            <select name="simple_cpt_tax_hierarchical" id="simple_cpt_tax_hierarchical" tabindex="5">
+            <select name="simple_cpt_tax_hierarchical" id="simple_cpt_tax_hierarchical" tabindex="2">
                 <option value="0" <?php selected( $simple_cpt_tax_hierarchical, '0' ); ?>><?php _e( 'No', 'simple-cpt' ); ?> (<?php _e( 'default', 'simple-cpt' ); ?>)</option>
                 <option value="1" <?php selected( $simple_cpt_tax_hierarchical, '1' ); ?>><?php _e( 'Yes', 'simple-cpt' ); ?></option>
             </select>
@@ -39,14 +39,14 @@ wp_nonce_field( 'simple_cpt_meta_box_nonce_action', 'simple_cpt_meta_box_nonce_f
         </td>
         <td>
             <label for="simple_cpt_tax_label"><?php _e( 'Plural Label', 'simple-cpt' ); ?></label>
-            <input type="text" name="simple_cpt_tax_label" id="simple_cpt_tax_label" class="widefat" tabindex="2" value="<?php echo $simple_cpt_tax_label; ?>" />
+            <input type="text" name="simple_cpt_tax_label" id="simple_cpt_tax_label" class="widefat" tabindex="4" value="<?php echo $simple_cpt_tax_label; ?>" />
             <p><?php _e( 'A plural descriptive name for the taxonomy.', 'simple-cpt' ); ?></p>
         </td>
     </tr>
     <tr>
         <td class="first">
             <label for="simple_cpt_tax_rewrite"><?php _e( 'Rewrite', 'simple-cpt' ); ?></label>
-            <select name="simple_cpt_tax_rewrite" id="simple_cpt_tax_rewrite" tabindex="6">
+            <select name="simple_cpt_tax_rewrite" id="simple_cpt_tax_rewrite" tabindex="5">
                 <option value="1" <?php selected( $simple_cpt_tax_rewrite, '1' ); ?>><?php _e( 'Yes', 'simple-cpt' ); ?> (<?php _e( 'default', 'simple-cpt' ); ?>)</option>
                 <option value="0" <?php selected( $simple_cpt_tax_rewrite, '0' ); ?>><?php _e( 'No', 'simple-cpt' ); ?></option>
             </select>
@@ -54,14 +54,14 @@ wp_nonce_field( 'simple_cpt_meta_box_nonce_action', 'simple_cpt_meta_box_nonce_f
         </td>
         <td>
             <label for="simple_cpt_tax_custom_rewrite_slug"><?php _e( 'Custom Rewrite Slug', 'simple-cpt' ); ?></label>
-            <input type="text" name="simple_cpt_tax_custom_rewrite_slug" id="simple_cpt_tax_custom_rewrite_slug" class="widefat" tabindex="7" value="<?php echo $simple_cpt_tax_custom_rewrite_slug; ?>" />
+            <input type="text" name="simple_cpt_tax_custom_rewrite_slug" id="simple_cpt_tax_custom_rewrite_slug" class="widefat" tabindex="6" value="<?php echo $simple_cpt_tax_custom_rewrite_slug; ?>" />
             <p><?php _e( 'Customize the permastruct slug.', 'simple-cpt' ); ?></p>
         </td>
     </tr>
     <tr>
         <td class="first">
         <label for="simple_cpt_tax_show_ui"><?php _e( 'Show UI', 'simple-cpt' ); ?></label>
-            <select name="simple_cpt_tax_show_ui" id="simple_cpt_tax_show_ui" tabindex="4">
+            <select name="simple_cpt_tax_show_ui" id="simple_cpt_tax_show_ui" tabindex="7">
                 <option value="1" <?php selected( $simple_cpt_tax_show_ui, '1' ); ?>><?php _e( 'Yes', 'simple-cpt' ); ?> (<?php _e( 'default', 'simple-cpt' ); ?>)</option>
                 <option value="0" <?php selected( $simple_cpt_tax_show_ui, '0' ); ?>><?php _e( 'No', 'simple-cpt' ); ?></option>
             </select>
@@ -69,7 +69,7 @@ wp_nonce_field( 'simple_cpt_meta_box_nonce_action', 'simple_cpt_meta_box_nonce_f
         </td>
         <td>
             <label for="simple_cpt_tax_show_admin_column"><?php _e( 'Admin Column', 'simple-cpt' ); ?></label>
-            <select name="simple_cpt_tax_show_admin_column" id="simple_cpt_tax_show_admin_column" tabindex="10">
+            <select name="simple_cpt_tax_show_admin_column" id="simple_cpt_tax_show_admin_column" tabindex="8">
                 <option value="1" <?php selected( $simple_cpt_tax_show_admin_column, '1' ); ?>><?php _e( 'Yes', 'simple-cpt' ); ?> (<?php _e( 'default', 'simple-cpt' ); ?>)</option>
                 <option value="0" <?php selected( $simple_cpt_tax_show_admin_column, '0' ); ?>><?php _e( 'No', 'simple-cpt' ); ?></option>
             </select>
@@ -87,7 +87,7 @@ wp_nonce_field( 'simple_cpt_meta_box_nonce_action', 'simple_cpt_meta_box_nonce_f
         </td>
         <td>
             <label for="simple_cpt_tax_query_var"><?php _e( 'Query Var', 'simple-cpt' ); ?></label>
-            <select name="simple_cpt_tax_query_var" id="simple_cpt_tax_query_var" tabindex="8">
+            <select name="simple_cpt_tax_query_var" id="simple_cpt_tax_query_var" tabindex="10">
                 <option value="1" <?php selected( $simple_cpt_tax_query_var, '1' ); ?>><?php _e( 'Yes', 'simple-cpt' ); ?> (<?php _e( 'default', 'simple-cpt' ); ?>)</option>
                 <option value="0" <?php selected( $simple_cpt_tax_query_var, '0' ); ?>><?php _e( 'No', 'simple-cpt' ); ?></option>
             </select>

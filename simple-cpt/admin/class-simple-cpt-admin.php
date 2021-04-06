@@ -419,10 +419,10 @@ class Simple_Cpt_Admin {
 			update_post_meta( $post_id, 'simple_cpt_show_in_menu', sanitize_text_field( $_POST['simple_cpt_show_in_menu'] ) );
 		}
 
-		$simple_cpt_supports = isset( $_POST['simple_cpt_supports'] ) ? sanitize_text_field($_POST['simple_cpt_supports']) : array(); 
+		$simple_cpt_supports = isset( $_POST['simple_cpt_supports'] ) ? $_POST['simple_cpt_supports'] : array(); 
 		update_post_meta( $post_id, 'simple_cpt_supports', $simple_cpt_supports );
 
-		$simple_cpt_builtin_tax = isset( $_POST['simple_cpt_builtin_tax'] ) ? sanitize_text_field($_POST['simple_cpt_builtin_tax']) : array();
+		$simple_cpt_builtin_tax = isset( $_POST['simple_cpt_builtin_tax'] ) ? $_POST['simple_cpt_builtin_tax'] : array();
 		update_post_meta( $post_id, 'simple_cpt_builtin_tax', $simple_cpt_builtin_tax );
 		update_post_meta( $post_id, 'gp_test', $_POST['simple_cpt_builtin_tax']  );
 
@@ -467,7 +467,7 @@ class Simple_Cpt_Admin {
 			update_post_meta( $post_id, 'simple_cpt_tax_show_admin_column', sanitize_text_field( $_POST['simple_cpt_tax_show_admin_column'] ) );
 		}
 
-		$simple_cpt_tax_post_types = isset( $_POST['simple_cpt_tax_post_types'] ) ? sanitize_text_field($_POST['simple_cpt_tax_post_types']) : array();
+		$simple_cpt_tax_post_types = isset( $_POST['simple_cpt_tax_post_types'] ) ? $_POST['simple_cpt_tax_post_types'] : array();
 		update_post_meta( $post_id, 'simple_cpt_tax_post_types', $simple_cpt_tax_post_types );
 
 		update_option( 'simple_cpt_flush_needed', true );
