@@ -39,23 +39,33 @@ That's it! Now you can easily start creating custom post types and taxonomies in
 
 == Frequently Asked Questions ==
 
+= When is “Simple CPT” needed?  =
+
+Whenever you need to extend the functionality of your Wordpress site with your own type of content then you can create custom post types. Creating custom post types for books, movies, reviews, products and so on, can transform your website from a blogging platform to a custom software solution e.g. a bookstore, a movie database, a product listing site etc.
+
 = What can I create with the “Simple CPT” plugin?  =
 
 With the “Simple CPT” plugin you can easily create custom post types (Books, Cars, Movies, Songs etc.) and custom taxonomies (Brand, Color, Type, Genre etc.)
 
-= Does “Simple CPT” reuqire any technical knowledge? =
+= When are custom Taxonomies needed?  =
 
-Absolutely not. All you need to do is to fill up some text fields and select some options with dropdowns and your CPT will be ready.
+Your regular blog posts use Categories and Tags to create an organization structure. Those build-in taxonomies can also be associated to any custom post type you create with Simple CPT.  However, the same organization doesn’t necessarily make sense for custom post types. For a “book” custom post type, ideally you’d like to have the option to specify the book’s author, the page count, genre, publisher and other book-specific data. This is when you create custom taxonomies and you associate them with your custom post type(s).
+
+= Does “Simple CPT” require coding, file editing or any technical knowledge? =
+
+Absolutely not. All you need to do is to fill up some text fields and select some options with dropdowns and your CPT will be ready. Check out the screenshots below.
 
 = Is the “Simple CPT” plugin compatible with my theme/plugins? =
 
-Of course! The “Simple CPT” plugin is compatible with any theme/plugin.
+Of course! The “Simple CPT” plugin is compatible with any theme/plugin that follows WordPress coding standards.
 
 == Screenshots ==
 
-1. Plugin Overview
-2. CPT admin table
-3. Add new Custom Post Type
+1. Plugin overview page
+2. Custom Post Types admin table
+3. Custom Taxonomies admin table
+4. Add a new Custom Post Type
+5. Edit a custom Taxonomy
 
 == Changelog ==
 
@@ -64,7 +74,7 @@ Of course! The “Simple CPT” plugin is compatible with any theme/plugin.
 
 == Upgrade Notice ==
 
-= 1.0 =
+= 1.0.0 =
 Initial release
 
 
