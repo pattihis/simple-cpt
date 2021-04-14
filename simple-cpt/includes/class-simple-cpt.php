@@ -70,7 +70,7 @@ class Simple_Cpt {
 		if ( defined( 'SIMPLE_CPT_VERSION' ) ) {
 			$this->version = SIMPLE_CPT_VERSION;
 		} else {
-			$this->version = '1.0.0';
+			$this->version = '1.0.1';
 		}
 		$this->plugin_name = 'simple-cpt';
 

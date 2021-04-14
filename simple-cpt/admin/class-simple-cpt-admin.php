@@ -596,7 +596,10 @@ class Simple_Cpt_Admin {
 	 * @since    1.0.0
 	 */
 	public function simple_cpt_admin_footer() {
-		include_once 'partials/simple-cpt-admin-footer.php';
+		$screen = get_current_screen();  
+		if ( $screen->parent_base === 'simple-cpt' ) {
+			include_once 'partials/simple-cpt-admin-footer.php';
+		}
 	}
 
 	/**
