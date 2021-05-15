@@ -9,7 +9,7 @@
  * @wordpress-plugin
  * Plugin Name:       Simple CPT
  * Plugin URI:        https://wordpress.org/plugins/simple-cpt/
- * Description:       A WordPress plugin to create and edit Custom Post Types easily.
+ * Description:       Simple CPT provides an easy to use interface for registering and managing Custom Post Types and Taxonomies.
  * Version:           1.0.1
  * Author:            George Pattihis
  * Author URI:        https://profiles.wordpress.org/pattihis/

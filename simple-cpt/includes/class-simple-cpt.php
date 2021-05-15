@@ -139,7 +139,7 @@ class Simple_Cpt {
 
 		$plugin_i18n = new Simple_Cpt_i18n();
 
-		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'simple-cpt' );
+		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
 
 	}
 

@@ -194,3 +194,6 @@ wp_reset_postdata();
         </div>
     </div>
 </div>
+<p>
+    <?php _e( 'This is a free plugin so if you find it useful then please', 'link-juice-keeper' ); ?> <a target="_blank" href="https://wordpress.org/support/plugin/simple-cpt/reviews/?rate=5#new-post" title="Rate the plugin"><?php _e( 'rate the plugin', 'link-juice-keeper' ); ?> ★★★★★</a> <?php _e( 'to support us. Thank you!', 'link-juice-keeper' ); ?>
+</p>
