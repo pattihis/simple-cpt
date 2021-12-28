@@ -85,7 +85,7 @@ class Simple_Cpt_Loader {
 	/**
      * Add a new shortcode to the collection to be registered with WordPress
      *
-     * @since     1.0.1
+     * @since     1.0.2
      * @param     string        $tag           The name of the new shortcode.
      * @param     object        $component      A reference to the instance of the object on which the shortcode is defined.
      * @param     string        $callback       The name of the function that defines the shortcode.

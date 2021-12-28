@@ -1,7 +1,7 @@
 # Simple CPT
 _A WordPress plugin to manage Custom Post Types_
 
-**Simple CPT** provides an easy to use interface for registering and managing custom post types and taxonomies for your WordPress website.
+**Simple CPT** provides an easy to use interface for registering and managing custom post types and custom taxonomies for your WordPress website.
 
 ![Simple CPT - Overview Page](https://ps.w.org/simple-cpt/assets/screenshot-1.jpg?rev=2511153)
 
@@ -35,9 +35,12 @@ In just a few minutes you can adapt your WordPress site to any type of project i
 * Once done uploading, activate Custom Post Type UI.
 * Navigate to the "Simple CPT" Menu.
 
-That's it! Now you can easily start creating custom post types and taxonomies in WordPress
+That's it! Now you can easily start creating custom post types and custom taxonomies in WordPress
 
 ## Changelog
+
+= 1.0.2 =
+* Ensure compatibility with WP latest version v5.8.2
 
 = 1.0.1 =
 * Bug Fix: Admin Footer Notice

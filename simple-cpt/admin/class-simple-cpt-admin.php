@@ -78,7 +78,7 @@ class Simple_Cpt_Admin {
 
 	/**
 	 * Initialize plugin
-	 * 
+	 *
 	 * @since    1.0.0
 	 */
 	public function plugin_init() {
@@ -145,8 +145,8 @@ class Simple_Cpt_Admin {
 	 * @since    1.0.0
 	 */
 	public function simple_cpt_admin_menu() {
-		
-		add_menu_page( 
+
+		add_menu_page(
 			__( 'Simple CPT', 'simple-cpt' ),
 			__( 'Simple CPT', 'simple-cpt' ),
 			'manage_options',
@@ -168,7 +168,7 @@ class Simple_Cpt_Admin {
 	public function simple_cpt_admin_display() {
 		include_once 'partials/simple-cpt-admin-display.php';
     }
-	
+
 	/**
 	 * Register the metabox for the custom fields.
 	 *
@@ -184,7 +184,7 @@ class Simple_Cpt_Admin {
 			'advanced',
 			'high'
 		);
-		
+
 		add_meta_box(
 			'simple_tax_meta_box',
 			__( 'Taxonomy Options', 'simple-cpt' ),
@@ -211,7 +211,7 @@ class Simple_Cpt_Admin {
 			'side',
 			'low'
 		);
-	    
+
 	}
 
 	/**
@@ -419,7 +419,7 @@ class Simple_Cpt_Admin {
 			update_post_meta( $post_id, 'simple_cpt_show_in_menu', sanitize_text_field( $_POST['simple_cpt_show_in_menu'] ) );
 		}
 
-		$simple_cpt_supports = isset( $_POST['simple_cpt_supports'] ) ? $this->safe_array( $_POST['simple_cpt_supports'] ) : array(); 
+		$simple_cpt_supports = isset( $_POST['simple_cpt_supports'] ) ? $this->safe_array( $_POST['simple_cpt_supports'] ) : array();
 		update_post_meta( $post_id, 'simple_cpt_supports', $simple_cpt_supports );
 
 		$simple_cpt_builtin_tax = isset( $_POST['simple_cpt_builtin_tax'] ) ? $this->safe_array( $_POST['simple_cpt_builtin_tax'] ) : array();
@@ -470,7 +470,7 @@ class Simple_Cpt_Admin {
 		update_post_meta( $post_id, 'simple_cpt_tax_post_types', $simple_cpt_tax_post_types );
 
 		update_option( 'simple_cpt_flush_needed', true );
-	    
+
 	}
 
 	/**
@@ -562,7 +562,7 @@ class Simple_Cpt_Admin {
 			print_r($list);
 		}
 	}
-	
+
 	/**
 	 * Post Update messages
 	 *
@@ -573,7 +573,7 @@ class Simple_Cpt_Admin {
 	function simple_cpt_update_messages( $msg ) {
 
 		$msg['simple_cpt'] = array(
-			0  => '', 
+			0  => '',
 			1  => __( 'Custom Post Type updated.', 'simple-cpt' ),
 			2  => __( 'Custom Post Type updated.', 'simple-cpt' ),
 			3  => __( 'Custom Post Type deleted.', 'simple-cpt' ),
@@ -591,19 +591,19 @@ class Simple_Cpt_Admin {
 	}
 
 	/**
-	 * Create our Custom Post Types and Taxonomies
+	 * Create our Custom Post Types and Custom Taxonomies
 	 *
 	 * @since    1.0.0
 	 */
 	public function simple_cpt_admin_footer() {
-		$screen = get_current_screen();  
+		$screen = get_current_screen();
 		if ( $screen->parent_base === 'simple-cpt' ) {
 			include_once 'partials/simple-cpt-admin-footer.php';
 		}
 	}
 
 	/**
-	 * Create our Custom Post Types and Taxonomies
+	 * Create our Custom Post Types and Custom Taxonomies
 	 *
 	 * @since    1.0.0
 	 */
@@ -611,7 +611,7 @@ class Simple_Cpt_Admin {
 
 		$simple_cpts = array();
 		$simple_taxs = array();
-		
+
 		// query custom post types
 		$get_simple_cpt        = array(
 			'numberposts'      => -1,
@@ -795,7 +795,7 @@ class Simple_Cpt_Admin {
 					'simple_cpt_tax_show_admin_column'   => (bool) $simple_cpt_tax_show_admin_column,
 					'simple_cpt_tax_builtin_taxonomies'  => unserialize( $simple_cpt_tax_post_types ),
 				);
-				
+
 				// register custom taxonomies
 				if ( is_array( $simple_taxs ) ) {
 					foreach ( $simple_taxs as $simple_tax ) {
