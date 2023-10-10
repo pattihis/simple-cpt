@@ -3,9 +3,9 @@ Contributors: pattihis
 Donate link: https://profiles.wordpress.org/pattihis/
 Tags: custom post type, simple cpt, cpt, taxonomies
 Requires at least: 5.0
-Tested up to: 5.8.2
+Tested up to: 6.0
 Requires PHP: 5.6
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -70,6 +70,11 @@ Of course! "Simple CPT" is compatible with any theme and plugin that follows Wor
 5. Edit a custom Taxonomy
 
 == Changelog ==
+
+= 1.0.3 =
+* Ensure compatibility with WP 6.0.x
+* Add shortcut links in Plugins Page
+* Update translations template
 
 = 1.0.2 =
 * Ensure compatibility with WP latest version v5.8.2

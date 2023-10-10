@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Simple CPT\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-08 00:49+0000\n"
+"POT-Creation-Date: 2022-08-11 07:56+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -16,11 +16,11 @@ msgstr ""
 "X-Loco-Version: 2.5.0; wp-5.5.3\n"
 "X-Domain: simple-cpt"
 
-#: admin/class-simple-cpt-admin.php:718
+#: admin/class-simple-cpt-admin.php:743
 msgid " found"
 msgstr ""
 
-#: admin/class-simple-cpt-admin.php:719
+#: admin/class-simple-cpt-admin.php:744
 msgid " found in Trash"
 msgstr ""
 
@@ -36,12 +36,8 @@ msgstr ""
 msgid "A singular descriptive name for the taxonomy."
 msgstr ""
 
-#. Description of the plugin
-msgid "A WordPress plugin to create and edit Custom Post Types easily."
-msgstr ""
-
 #: admin/class-simple-cpt-admin.php:92 admin/class-simple-cpt-admin.php:119
-#: admin/class-simple-cpt-admin.php:712
+#: admin/class-simple-cpt-admin.php:737
 msgid "Add New"
 msgstr ""
 
@@ -63,7 +59,7 @@ msgid ""
 "your themes and other plugins are listed below"
 msgstr ""
 
-#: admin/class-simple-cpt-admin.php:510 admin/class-simple-cpt-admin.php:543
+#: admin/class-simple-cpt-admin.php:532 admin/class-simple-cpt-admin.php:565
 #: admin/partials/simple-cpt-metabox-cpt.php:199
 msgid "Author"
 msgstr ""
@@ -78,6 +74,10 @@ msgstr ""
 
 #: admin/partials/simple-cpt-metabox-cpt.php:196
 msgid "Comments"
+msgstr ""
+
+#: admin/class-simple-cpt-admin.php:185
+msgid "Contact"
 msgstr ""
 
 #: admin/partials/simple-cpt-metabox-cpt.php:204
@@ -100,38 +100,38 @@ msgstr ""
 msgid "Custom Post Type"
 msgstr ""
 
-#: admin/class-simple-cpt-admin.php:579
+#: admin/class-simple-cpt-admin.php:601
 msgid "Custom Post Type deleted."
 msgstr ""
 
-#: admin/class-simple-cpt-admin.php:587
+#: admin/class-simple-cpt-admin.php:609
 msgid "Custom Post Type draft updated."
 msgstr ""
 
-#: admin/class-simple-cpt-admin.php:583
+#: admin/class-simple-cpt-admin.php:605
 msgid "Custom Post Type published."
 msgstr ""
 
 #. %s: date and time of the revision
-#: admin/class-simple-cpt-admin.php:582
+#: admin/class-simple-cpt-admin.php:604
 #, php-format
 msgid "Custom Post Type restored to revision from %s"
 msgstr ""
 
-#: admin/class-simple-cpt-admin.php:584
+#: admin/class-simple-cpt-admin.php:606
 msgid "Custom Post Type saved."
 msgstr ""
 
-#: admin/class-simple-cpt-admin.php:586
+#: admin/class-simple-cpt-admin.php:608
 msgid "Custom Post Type scheduled for."
 msgstr ""
 
-#: admin/class-simple-cpt-admin.php:585
+#: admin/class-simple-cpt-admin.php:607
 msgid "Custom Post Type submitted."
 msgstr ""
 
-#: admin/class-simple-cpt-admin.php:577 admin/class-simple-cpt-admin.php:578
-#: admin/class-simple-cpt-admin.php:580
+#: admin/class-simple-cpt-admin.php:599 admin/class-simple-cpt-admin.php:600
+#: admin/class-simple-cpt-admin.php:602
 msgid "Custom Post Type updated."
 msgstr ""
 
@@ -159,7 +159,7 @@ msgstr ""
 msgid "Customize the permastruct slug."
 msgstr ""
 
-#: admin/class-simple-cpt-admin.php:511 admin/class-simple-cpt-admin.php:544
+#: admin/class-simple-cpt-admin.php:533 admin/class-simple-cpt-admin.php:566
 msgid "Date"
 msgstr ""
 
@@ -189,12 +189,12 @@ msgstr ""
 msgid "default"
 msgstr ""
 
-#: admin/class-simple-cpt-admin.php:509
+#: admin/class-simple-cpt-admin.php:531
 #: admin/partials/simple-cpt-metabox-cpt.php:41
 msgid "Description"
 msgstr ""
 
-#: admin/class-simple-cpt-admin.php:199 admin/class-simple-cpt-admin.php:208
+#: admin/class-simple-cpt-admin.php:221 admin/class-simple-cpt-admin.php:230
 msgid "Documentation"
 msgstr ""
 
@@ -252,7 +252,7 @@ msgstr ""
 msgid "Feeds"
 msgstr ""
 
-#: admin/class-simple-cpt-admin.php:224 admin/class-simple-cpt-admin.php:235
+#: admin/class-simple-cpt-admin.php:246 admin/class-simple-cpt-admin.php:257
 msgid "For more info about each field please check"
 msgstr ""
 
@@ -284,12 +284,12 @@ msgstr ""
 msgid "Hierarchical"
 msgstr ""
 
-#. URI of the plugin
-msgid "https://github.com/pattihis/simple-cpt"
-msgstr ""
-
 #. Author URI of the plugin
 msgid "https://profiles.wordpress.org/pattihis/"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://wordpress.org/plugins/simple-cpt/"
 msgstr ""
 
 #: admin/partials/simple-cpt-metabox-tax.php:31
@@ -414,11 +414,11 @@ msgstr ""
 msgid "Post Formats"
 msgstr ""
 
-#: admin/class-simple-cpt-admin.php:181
+#: admin/class-simple-cpt-admin.php:203
 msgid "Post Type Options"
 msgstr ""
 
-#: admin/class-simple-cpt-admin.php:90 admin/class-simple-cpt-admin.php:542
+#: admin/class-simple-cpt-admin.php:90 admin/class-simple-cpt-admin.php:564
 #: admin/partials/simple-cpt-metabox-tax.php:98
 msgid "Post Types"
 msgstr ""
@@ -499,6 +499,10 @@ msgstr ""
 msgid "Sets the show_in_rest key for this taxonomy."
 msgstr ""
 
+#: admin/class-simple-cpt-admin.php:184
+msgid "Settings"
+msgstr ""
+
 #: admin/partials/simple-cpt-metabox-cpt.php:140
 msgid "Should a feed permastruct be built for this post type."
 msgstr ""
@@ -546,12 +550,18 @@ msgstr ""
 msgid "Simple CPT Overview"
 msgstr ""
 
+#. Description of the plugin
+msgid ""
+"Simple CPT provides an easy to use interface for registering and managing "
+"Custom Post Types and Custom Taxonomies."
+msgstr ""
+
 #: admin/partials/simple-cpt-metabox-cpt.php:33
 #: admin/partials/simple-cpt-metabox-tax.php:36
 msgid "Singular Name"
 msgstr ""
 
-#: admin/class-simple-cpt-admin.php:508 admin/class-simple-cpt-admin.php:541
+#: admin/class-simple-cpt-admin.php:530 admin/class-simple-cpt-admin.php:563
 msgid "Slug"
 msgstr ""
 
@@ -575,11 +585,11 @@ msgstr ""
 msgid "Taxonomy Name"
 msgstr ""
 
-#: admin/class-simple-cpt-admin.php:190
+#: admin/class-simple-cpt-admin.php:212
 msgid "Taxonomy Options"
 msgstr ""
 
-#: admin/class-simple-cpt-admin.php:224 admin/class-simple-cpt-admin.php:235
+#: admin/class-simple-cpt-admin.php:246 admin/class-simple-cpt-admin.php:257
 msgid "the official documentation."
 msgstr ""
 
@@ -603,7 +613,7 @@ msgid ""
 "Dashicons</a>), e.g. dashicons-heart"
 msgstr ""
 
-#: admin/class-simple-cpt-admin.php:507 admin/class-simple-cpt-admin.php:540
+#: admin/class-simple-cpt-admin.php:529 admin/class-simple-cpt-admin.php:562
 #: admin/partials/simple-cpt-metabox-cpt.php:191
 msgid "Title"
 msgstr ""

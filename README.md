@@ -39,6 +39,11 @@ That's it! Now you can easily start creating custom post types and custom taxono
 
 ## Changelog
 
+= 1.0.3 =
+* Ensure compatibility with WP 6.0.x
+* Add shortcut links in Plugins Page
+* Update translations template
+
 = 1.0.2 =
 * Ensure compatibility with WP latest version v5.8.2
 

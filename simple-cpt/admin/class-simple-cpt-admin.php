@@ -170,6 +170,28 @@ class Simple_Cpt_Admin {
     }
 
 	/**
+	 * Show custom links in Plugins Page
+	 *
+	 * @since  1.0.3
+	 * @access public
+	 * @param  array $links Default Links.
+	 * @param  array $file Plugin's root filepath.
+	 * @return array Links list to display in plugins page.
+	 */
+	public function simple_cpt_plugin_links( $links, $file ) {
+
+		if ($file == SIMPLE_CPT_BASENAME) {
+			$scpt_links = '<a href="'.get_admin_url().'admin.php?page=simple-cpt" title="Plugin Options">'.__('Settings', 'simple-cpt').'</a>';
+			$scpt_visit = '<a href="https://gp-web.dev/" title="Contact" target="_blank" >'.__('Contact', 'simple-cpt').'</a>';
+			array_unshift($links, $scpt_visit);
+			array_unshift($links, $scpt_links);
+		}
+
+		return $links;
+
+	}
+
+	/**
 	 * Register the metabox for the custom fields.
 	 *
 	 * @since    1.0.0

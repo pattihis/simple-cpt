@@ -1,22 +1,29 @@
 <?php
-
 /**
+ * Simple CPT
  *
+ * @package           Simple_Cpt
+ * @author            George Pattihis
+ * @copyright         2021 George Pattihis
+ * @license           GPL-2.0-or-later
  * @link              https://profiles.wordpress.org/pattihis/
  * @since             1.0.0
- * @package           Simple_Cpt
  *
  * @wordpress-plugin
  * Plugin Name:       Simple CPT
  * Plugin URI:        https://wordpress.org/plugins/simple-cpt/
  * Description:       Simple CPT provides an easy to use interface for registering and managing Custom Post Types and Custom Taxonomies.
- * Version:           1.0.2
+ * Version:           1.0.3
+ * Requires at least: 5.0
+ * Tested up to:      6.0
+ * Requires PHP:      5.6
  * Author:            George Pattihis
  * Author URI:        https://profiles.wordpress.org/pattihis/
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       simple-cpt
  * Domain Path:       /languages
+ *
  */
 
 // If this file is called directly, abort.
@@ -27,7 +34,12 @@ if ( ! defined( 'WPINC' ) ) {
 /**
  * Currently plugin version.
  */
-define( 'SIMPLE_CPT_VERSION', '1.0.2' );
+define( 'SIMPLE_CPT_VERSION', '1.0.3' );
+
+/**
+ * Plugin's basename
+ */
+define( 'SIMPLE_CPT_BASENAME', plugin_basename(__FILE__) );
 
 /**
  * The code that runs during plugin activation.

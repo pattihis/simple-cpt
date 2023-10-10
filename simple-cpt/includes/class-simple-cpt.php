@@ -70,7 +70,7 @@ class Simple_Cpt {
 		if ( defined( 'SIMPLE_CPT_VERSION' ) ) {
 			$this->version = SIMPLE_CPT_VERSION;
 		} else {
-			$this->version = '1.0.2';
+			$this->version = '1.0.3';
 		}
 		$this->plugin_name = 'simple-cpt';
 
@@ -164,6 +164,7 @@ class Simple_Cpt {
 		// admin setup
 		$this->loader->add_action( 'admin_init', $plugin_admin, 'simple_cpt_settings_flush_rewrite' );
 		$this->loader->add_action( 'admin_menu', $plugin_admin, 'simple_cpt_admin_menu' );
+		$this->loader->add_filter( 'plugin_action_links', $plugin_admin, 'simple_cpt_plugin_links', 10, 2 );
 		$this->loader->add_action( 'add_meta_boxes', $plugin_admin, 'simple_cpt_metabox');
 		$this->loader->add_action( 'save_post', $plugin_admin, 'simple_cpt_save_metabox');
 		$this->loader->add_filter( 'post_updated_messages', $plugin_admin, 'simple_cpt_update_messages');
