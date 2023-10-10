@@ -18,7 +18,7 @@
  * @since      1.0.0
  * @package    Simple_Cpt
  * @subpackage Simple_Cpt/includes
- * @author     George Pattihis <gpattihis@gmail.com>
+ * @author     George Pattichis <gpattihis@gmail.com>
  */
 class Simple_Cpt_Activator {
 
@@ -32,7 +32,7 @@ class Simple_Cpt_Activator {
 	public static function activate() {
 
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-simple-cpt-admin.php';
-        $plugin_admin = new Simple_Cpt_Admin('simple-cpt', '1.0.3');
+        $plugin_admin = new Simple_Cpt_Admin('simple-cpt', '1.0.4');
 
 		$plugin_admin->simple_cpt_plugin_activate_flush_rewrite();
 

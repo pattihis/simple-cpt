@@ -25,7 +25,7 @@
  * @since      1.0.0
  * @package    Simple_Cpt
  * @subpackage Simple_Cpt/includes
- * @author     George Pattihis <gpattihis@gmail.com>
+ * @author     George Pattichis <gpattihis@gmail.com>
  */
 class Simple_Cpt {
 
@@ -70,7 +70,7 @@ class Simple_Cpt {
 		if ( defined( 'SIMPLE_CPT_VERSION' ) ) {
 			$this->version = SIMPLE_CPT_VERSION;
 		} else {
-			$this->version = '1.0.3';
+			$this->version = '1.0.4';
 		}
 		$this->plugin_name = 'simple-cpt';
 

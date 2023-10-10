@@ -18,7 +18,7 @@
  * @since      1.0.0
  * @package    Simple_Cpt
  * @subpackage Simple_Cpt/includes
- * @author     George Pattihis <gpattihis@gmail.com>
+ * @author     George Pattichis <gpattihis@gmail.com>
  */
 class Simple_Cpt_Deactivator {
 
@@ -30,7 +30,7 @@ class Simple_Cpt_Deactivator {
 	 * @since    1.0.0
 	 */
 	public static function deactivate() {
-		
+
 		flush_rewrite_rules();
 
 	}

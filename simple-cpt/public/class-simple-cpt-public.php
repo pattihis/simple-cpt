@@ -18,7 +18,7 @@
  *
  * @package    Simple_Cpt
  * @subpackage Simple_Cpt/public
- * @author     George Pattihis <gpattihis@gmail.com>
+ * @author     George Pattichis <gpattihis@gmail.com>
  */
 class Simple_Cpt_Public {
 

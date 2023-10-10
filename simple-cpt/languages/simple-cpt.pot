@@ -257,7 +257,7 @@ msgid "For more info about each field please check"
 msgstr ""
 
 #. Author of the plugin
-msgid "George Pattihis"
+msgid "George Pattichis"
 msgstr ""
 
 #: admin/partials/simple-cpt-admin-footer.php:28
