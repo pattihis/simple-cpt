@@ -3,9 +3,9 @@ Contributors: pattihis
 Donate link: https://profiles.wordpress.org/pattihis/
 Tags: custom post type, simple cpt, cpt, taxonomies
 Requires at least: 5.3.0
-Tested up to: 6.5.5
+Tested up to: 6.7.1
 Requires PHP: 7.0
-Stable tag: 1.0.5
+Stable tag: 1.0.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -71,6 +71,9 @@ Of course! "Simple CPT" is compatible with any theme and plugin that follows Wor
 
 == Changelog ==
 
+= 1.0.6 =
+* Ensure Compatibility with WP v6.7
+
 = 1.0.5 =
 * Ensure Compatibility with WP v6.5
 * Fix deprecation warning about dynamic property.
@@ -94,6 +97,3 @@ Of course! "Simple CPT" is compatible with any theme and plugin that follows Wor
 * Initial release
 
 == Upgrade Notice ==
-
-
-

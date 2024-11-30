@@ -1,5 +1,4 @@
 <?php
-
 /**
  * The file that defines the core plugin class
  *
@@ -70,7 +69,7 @@ class Simple_Cpt {
 		if ( defined( 'SIMPLE_CPT_VERSION' ) ) {
 			$this->version = SIMPLE_CPT_VERSION;
 		} else {
-			$this->version = '1.0.5';
+			$this->version = '1.0.6';
 		}
 		$this->plugin_name = 'simple-cpt';
 
@@ -78,7 +77,6 @@ class Simple_Cpt {
 		$this->set_locale();
 		$this->define_admin_hooks();
 		$this->define_public_hooks();
-
 	}
 
 	/**
@@ -103,27 +101,26 @@ class Simple_Cpt {
 		 * The class responsible for orchestrating the actions and filters of the
 		 * core plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-simple-cpt-loader.php';
+		require_once plugin_dir_path( __DIR__ ) . 'includes/class-simple-cpt-loader.php';
 
 		/**
 		 * The class responsible for defining internationalization functionality
 		 * of the plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-simple-cpt-i18n.php';
+		require_once plugin_dir_path( __DIR__ ) . 'includes/class-simple-cpt-i18n.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-simple-cpt-admin.php';
+		require_once plugin_dir_path( __DIR__ ) . 'admin/class-simple-cpt-admin.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the public-facing
 		 * side of the site.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-simple-cpt-public.php';
+		require_once plugin_dir_path( __DIR__ ) . 'public/class-simple-cpt-public.php';
 
 		$this->loader = new Simple_Cpt_Loader();
-
 	}
 
 	/**
@@ -140,7 +137,6 @@ class Simple_Cpt {
 		$plugin_i18n = new Simple_Cpt_i18n();
 
 		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
-
 	}
 
 	/**
@@ -157,25 +153,24 @@ class Simple_Cpt {
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
 
-		// initialise
+		// initialise.
 		$this->loader->add_action( 'init', $plugin_admin, 'plugin_init' );
 		$this->loader->add_action( 'init', $plugin_admin, 'register_simple_cpts' );
 
-		// admin setup
+		// admin setup.
 		$this->loader->add_action( 'admin_init', $plugin_admin, 'simple_cpt_settings_flush_rewrite' );
 		$this->loader->add_action( 'admin_menu', $plugin_admin, 'simple_cpt_admin_menu' );
 		$this->loader->add_filter( 'plugin_action_links', $plugin_admin, 'simple_cpt_plugin_links', 10, 2 );
-		$this->loader->add_action( 'add_meta_boxes', $plugin_admin, 'simple_cpt_metabox');
-		$this->loader->add_action( 'save_post', $plugin_admin, 'simple_cpt_save_metabox');
-		$this->loader->add_filter( 'post_updated_messages', $plugin_admin, 'simple_cpt_update_messages');
+		$this->loader->add_action( 'add_meta_boxes', $plugin_admin, 'simple_cpt_metabox' );
+		$this->loader->add_action( 'save_post', $plugin_admin, 'simple_cpt_save_metabox' );
+		$this->loader->add_filter( 'post_updated_messages', $plugin_admin, 'simple_cpt_update_messages' );
 		$this->loader->add_action( 'admin_footer', $plugin_admin, 'simple_cpt_admin_footer' );
 
-		// table columns
-		$this->loader->add_filter( 'manage_simple_cpt_posts_columns', $plugin_admin, 'simple_cpt_posts_columns');
-		$this->loader->add_action( 'manage_simple_cpt_posts_custom_column', $plugin_admin, 'simple_cpt_posts_custom_columns', 10, 2);
-		$this->loader->add_filter( 'manage_simple_tax_posts_columns', $plugin_admin, 'simple_tax_posts_columns');
-		$this->loader->add_action( 'manage_simple_tax_posts_custom_column', $plugin_admin, 'simple_tax_posts_custom_columns', 10, 2);
-
+		// table columns.
+		$this->loader->add_filter( 'manage_simple_cpt_posts_columns', $plugin_admin, 'simple_cpt_posts_columns' );
+		$this->loader->add_action( 'manage_simple_cpt_posts_custom_column', $plugin_admin, 'simple_cpt_posts_custom_columns', 10, 2 );
+		$this->loader->add_filter( 'manage_simple_tax_posts_columns', $plugin_admin, 'simple_tax_posts_columns' );
+		$this->loader->add_action( 'manage_simple_tax_posts_custom_column', $plugin_admin, 'simple_tax_posts_custom_columns', 10, 2 );
 	}
 
 	/**
@@ -191,7 +186,6 @@ class Simple_Cpt {
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
-
 	}
 
 	/**
@@ -233,5 +227,4 @@ class Simple_Cpt {
 	public function get_version() {
 		return $this->version;
 	}
-
 }

@@ -13,9 +13,9 @@
  * Plugin Name:       Simple CPT
  * Plugin URI:        https://wordpress.org/plugins/simple-cpt/
  * Description:       Simple CPT provides an easy to use interface for registering and managing Custom Post Types and Custom Taxonomies.
- * Version:           1.0.5
+ * Version:           1.0.6
  * Requires at least: 5.3.0
- * Tested up to:      6.5.5
+ * Tested up to:      6.7.1
  * Requires PHP:      7.0
  * Author:            George Pattichis
  * Author URI:        https://profiles.wordpress.org/pattihis/
@@ -34,7 +34,7 @@ if ( ! defined( 'WPINC' ) ) {
 /**
  * Currently plugin version.
  */
-define( 'SIMPLE_CPT_VERSION', '1.0.5' );
+define( 'SIMPLE_CPT_VERSION', '1.0.6' );
 
 /**
  * Plugin's basename

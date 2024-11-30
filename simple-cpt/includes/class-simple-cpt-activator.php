@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Fired during plugin activation
  *
@@ -31,11 +30,9 @@ class Simple_Cpt_Activator {
 	 */
 	public static function activate() {
 
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-simple-cpt-admin.php';
-        $plugin_admin = new Simple_Cpt_Admin('simple-cpt', '1.0.5');
+		require_once plugin_dir_path( __DIR__ ) . 'admin/class-simple-cpt-admin.php';
+		$plugin_admin = new Simple_Cpt_Admin( 'simple-cpt', '1.0.6' );
 
 		$plugin_admin->simple_cpt_plugin_activate_flush_rewrite();
-
 	}
-
 }
