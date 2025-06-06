@@ -69,14 +69,13 @@ class Simple_Cpt {
 		if ( defined( 'SIMPLE_CPT_VERSION' ) ) {
 			$this->version = SIMPLE_CPT_VERSION;
 		} else {
-			$this->version = '1.0.6';
+			$this->version = '1.1.0';
 		}
 		$this->plugin_name = 'simple-cpt';
 
 		$this->load_dependencies();
 		$this->set_locale();
 		$this->define_admin_hooks();
-		$this->define_public_hooks();
 	}
 
 	/**
@@ -87,7 +86,6 @@ class Simple_Cpt {
 	 * - Simple_Cpt_Loader. Orchestrates the hooks of the plugin.
 	 * - Simple_Cpt_i18n. Defines internationalization functionality.
 	 * - Simple_Cpt_Admin. Defines all hooks for the admin area.
-	 * - Simple_Cpt_Public. Defines all hooks for the public side of the site.
 	 *
 	 * Create an instance of the loader which will be used to register the hooks
 	 * with WordPress.
@@ -113,12 +111,6 @@ class Simple_Cpt {
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
 		require_once plugin_dir_path( __DIR__ ) . 'admin/class-simple-cpt-admin.php';
-
-		/**
-		 * The class responsible for defining all actions that occur in the public-facing
-		 * side of the site.
-		 */
-		require_once plugin_dir_path( __DIR__ ) . 'public/class-simple-cpt-public.php';
 
 		$this->loader = new Simple_Cpt_Loader();
 	}
@@ -171,21 +163,6 @@ class Simple_Cpt {
 		$this->loader->add_action( 'manage_simple_cpt_posts_custom_column', $plugin_admin, 'simple_cpt_posts_custom_columns', 10, 2 );
 		$this->loader->add_filter( 'manage_simple_tax_posts_columns', $plugin_admin, 'simple_tax_posts_columns' );
 		$this->loader->add_action( 'manage_simple_tax_posts_custom_column', $plugin_admin, 'simple_tax_posts_custom_columns', 10, 2 );
-	}
-
-	/**
-	 * Register all of the hooks related to the public-facing functionality
-	 * of the plugin.
-	 *
-	 * @since    1.0.0
-	 * @access   private
-	 */
-	private function define_public_hooks() {
-
-		$plugin_public = new Simple_Cpt_Public( $this->get_plugin_name(), $this->get_version() );
-
-		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
-		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
 	}
 
 	/**

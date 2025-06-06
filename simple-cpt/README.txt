@@ -3,9 +3,9 @@ Contributors: pattihis
 Donate link: https://profiles.wordpress.org/pattihis/
 Tags: custom post type, simple cpt, cpt, taxonomies
 Requires at least: 5.3.0
-Tested up to: 6.7.1
+Tested up to: 6.8.1
 Requires PHP: 7.0
-Stable tag: 1.0.6
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -51,7 +51,7 @@ With the "Simple CPT" plugin you can easily create custom post types (Books, Car
 
 = When are custom Taxonomies needed?  =
 
-Your regular blog posts use Categories and Tags to create an organization structure. Those build-in taxonomies can also be linked to any custom post type you create with Simple CPT.  However, the same organization doesn’t necessarily make sense for all custom post types. For a "book" custom post type, ideally you’d like to have the option to specify the book’s author, the genre, publisher and other book-specific data. This is when you create custom taxonomies and you associate them with your custom post type(s).
+Your regular blog posts use Categories and Tags to create an organization structure. Those build-in taxonomies can also be linked to any custom post type you create with Simple CPT.  However, the same organization doesn't necessarily make sense for all custom post types. For a "book" custom post type, ideally you'd like to have the option to specify the book's author, the genre, publisher and other book-specific data. This is when you create custom taxonomies and you associate them with your custom post type(s).
 
 = Does "Simple CPT" require manual coding or file editing? =
 
@@ -70,6 +70,12 @@ Of course! "Simple CPT" is compatible with any theme and plugin that follows Wor
 5. Edit a custom Taxonomy
 
 == Changelog ==
+
+= 1.1.0 =
+* Removed unnecessary public-facing assets and functionality
+* Streamlined plugin structure for better performance
+* Improved code organization
+* Ensure Compatibility with WP v6.8
 
 = 1.0.6 =
 * Ensure Compatibility with WP v6.7
